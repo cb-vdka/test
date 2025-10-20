@@ -1,0 +1,75 @@
+/* Admin custom styles to match client header formatting */
+.header-center-block { display:flex; align-items:center; gap:15px; text-decoration:none; color:#fff; }
+.header-logo { width:145px !important; height:auto; }
+.header-text { color:#FFD700; line-height:1.1; text-align:center; }
+.header-title-vi { font-size:13.5px; font-weight:bold; text-transform:uppercase; letter-spacing:.5px; margin-bottom:2px; }
+.header-title-en { font-size: 6.6px; opacity:.9; text-align:center; font-weight:normal; }
+@media (max-width:575.98px){
+  .header-title-vi{ font-size:12px; }
+  .header-title-en{ display:none; }
+}
+
+/* Sidebar toggle icon animation */
+#sidebarToggleIcon { transition: transform .2s ease; }
+#sidebarToggleIcon.rotated { transform: rotate(90deg); }
+
+/* Responsive sidebar behavior */
+@media (max-width:991.98px){
+  .sidebar{ position:fixed; top:0; left:0; height:100vh; z-index:1040; width:260px; }
+  .sidebar .sidebar-content.collapse:not(.show){ display:none; }
+  .sidebar .sidebar-content.collapse.show{ display:block; }
+}
+
+/* Slide-in animation + backdrop for small screens */
+@media (max-width:991.98px){
+  .sidebar{ transform: translateX(-100%); transition: transform .25s ease; background:#1a2035; }
+  .sidebar.is-open{ transform: translateX(0); }
+  .sidebar-backdrop{ position:fixed; inset:0; background:rgba(0,0,0,.35); opacity:0; visibility:hidden; transition:opacity .2s ease; z-index:1030; }
+  .sidebar.is-open ~ .sidebar-backdrop{ opacity:1; visibility:visible; }
+}
+
+/* Home icon styling - bolder and more attractive */
+.nav-home i.fas.fa-home {
+    font-size: 18px;
+    font-weight: 900;
+    color: #007bff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+}
+
+.nav-home:hover i.fas.fa-home {
+    color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Teacher navbar header text styling */
+.main-header .header-text {
+    color: #FFD700;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.main-header .header-title-vi {
+    font-size: 13.5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.main-header .header-title-en {
+    font-size: 6.6px;
+    opacity: 0.9;
+    text-align: center;
+    font-weight: normal;
+}
+
+@media (max-width: 575.98px) {
+    .main-header .header-title-vi {
+        font-size: 12px;
+    }
+    .main-header .header-title-en {
+        display: none;
+    }
+}
+

@@ -1,0 +1,331 @@
+
+    :root {
+        /* Palette chủ đạo */
+        --brand-red: #D32F2F; /* Đỏ chủ đạo */
+        --brand-red-dark: #9A0007;
+        --brand-green: #2E7D32; /* Xanh lá chủ đạo */
+        --brand-green-dark: #1B5E20;
+        --brand-white: #ffffff; /* Trắng */
+
+        /* Neutrals & legacy mapping for compatibility */
+        --military-green: var(--brand-green);
+        --military-khaki: #F6F7F9; /* nhạt để phối với trắng */
+        --military-dark: #101418;   /* Nền tối đậm để nổi bật màu */
+        --military-light-bg: #f5f7fb; /* Nền tổng thể sáng dịu */
+    }
+
+    html, body { margin:0; padding:0; }
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: var(--military-light-bg);
+    }
+
+    h1, h2, h3, h4, .navbar-brand, .btn-military {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 800;
+        letter-spacing: .5px;
+    }
+
+    /* --- Header / Navbar --- */
+    .navbar {
+        background-color: var(--brand-white);
+        border-bottom: 3px solid var(--brand-green);
+    }
+
+    /* --- Custom Military Style Button --- */
+    .btn-military {
+        background-color: var(--brand-red);
+        color: var(--brand-white);
+        border: 2px solid var(--brand-green);
+        border-radius: 0; /* Sharp corners */
+        padding: 10px 20px;
+        text-transform: uppercase;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+
+    .btn-military:hover {
+        background-color: var(--brand-green);
+        color: var(--brand-white);
+        border-color: var(--brand-red);
+    }
+    
+    .navbar .btn-military {
+        margin: 0 5px;
+    }
+
+    /* --- Offcanvas Menu --- */
+    .offcanvas {
+        background-color: var(--brand-white);
+    }
+    .offcanvas .btn-military {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+
+    /* --- Banner Hero --- */
+    #military-banner .carousel-item {
+        height: 60vh; /* Adjust height as needed */
+        min-height: 400px;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+    }
+    
+    /* Dark overlay for better text readability */
+    #military-banner .carousel-item::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    #military-banner .carousel-caption {
+        top: 50%;
+        transform: translateY(-50%);
+        bottom: auto;
+        z-index: 2; /* Ensure text is above overlay */
+        text-align: center;
+    }
+
+    #military-banner .carousel-caption h1 {
+        font-size: 4rem;
+        color: var(--brand-white);
+        text-shadow: 2px 2px 4px #000;
+        margin-bottom: 1rem;
+    }
+
+    #military-banner .carousel-caption p {
+        font-size: 1.5rem;
+        color: var(--brand-white);
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+    }
+    
+    /* --- Carousel Controls --- */
+    .carousel-indicators button {
+        width: 15px !important;
+        height: 15px !important;
+        border-radius: 50%;
+        background-color: var(--brand-white) !important;
+        border: 2px solid var(--brand-green);
+        opacity: 0.7;
+    }
+
+    .carousel-indicators .active {
+        background-color: var(--brand-red) !important;
+        opacity: 1;
+    }
+
+	/* --- Pattern background (trống đồng subtle) --- */
+	body {
+		/* Pattern nhẹ: vòng tròn và tia (SVG data-uri), ưu tiên hiệu suất */
+		background-image: radial-gradient(circle at 20px 20px, rgba(211,47,47,0.06) 2px, transparent 2px),
+		radial-gradient(circle at 60px 60px, rgba(46,125,50,0.06) 2px, transparent 2px),
+		linear-gradient(0deg, rgba(255,255,255,0.6), rgba(255,255,255,0.6));
+		background-size: 80px 80px, 80px 80px, auto;
+		background-color: var(--military-light-bg);
+	}
+
+	/* Header tiers */
+	.header-top { padding-bottom: 18px !important; }
+	.header-bottom { padding-bottom: 6px !important; }
+
+	/* Header bottom nav link colors */
+	.header-bottom .nav-link { color: #ffffff !important; transition: color .15s ease-in-out; }
+	header .header-bottom .navbar-nav .nav-link { color: #ffffff !important; }
+	header .header-bottom .navbar-nav .nav-link:hover, header .header-bottom .navbar-nav .nav-link:focus { color: #FFD54F !important; }
+
+	/* --- Sections --- */
+	.section-title {
+		font-family: 'Roboto', sans-serif;
+		font-weight: 800;
+		letter-spacing: .5px;
+		text-transform: uppercase;
+		color: var(--military-dark);
+		border-left: 6px solid var(--military-green);
+		padding-left: 12px;
+		margin-bottom: 1.25rem;
+	}
+
+	.feature-card {
+		background: #fff;
+		border: 1px solid #d9d9d9;
+		box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+		border-radius: 6px;
+		transition: transform .2s ease, box-shadow .2s ease;
+		height: 100%;
+	}
+
+	.feature-card:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+	}
+
+	.feature-icon {
+		width: 56px;
+		height: 56px;
+		border: 2px solid var(--military-green);
+		color: var(--military-green);
+		border-radius: 50%;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.25rem;
+	}
+
+	.anchor-offset {
+		scroll-margin-top: 90px; /* offset for navbar */
+	}
+
+	/* Contact card */
+	.contact-card {
+		background: #fff;
+		border: 1px solid #d9d9d9;
+		border-left: 6px solid var(--military-green);
+		border-radius: 6px;
+	}
+
+	small.muted {
+		color: #6c757d;
+	}
+
+    /* --- Footer --- */
+
+
+    /* Footer in header style */
+    .bg-footer.header-background-pattern{
+        background-color: #0f3d25; /* same base as header */
+        color: #ffffff;
+        border-top: 0;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='400'%3E%3Cpath d='M0 200 Q300 100 600 200 T1200 200' fill='none' stroke='%2300b050' stroke-width='0.5'/%3E%3C/svg%3E");
+        background-repeat: repeat;
+        background-size: cover;
+       
+    }
+
+    .footer-bottom {
+        background-color: var(--brand-white);
+        border-top: 1px solid #2E7D32;
+    }
+
+    
+    .footer-bottom p { color: #2E7D32; }
+    .bg-footer.header-background-pattern .footer-bottom p{ color: rgba(255,255,255,.85) !important; }
+
+    /* remove any stray gaps below footer */
+    #tempaltemo_footer{ margin-bottom:0 !important; padding-bottom:0 !important; }
+
+	/* --- High contrast text on light backgrounds --- */
+
+    
+    /* ---- Bắt đầu code cho header phiên bản đầy đủ ---- */
+
+/* Thanh header chính */
+.header-main {
+    display: flex;
+    justify-content: space-between; /* Căn đều 3 khối trái, giữa, phải */
+    align-items: center;
+    padding: 20px;
+    background-color: #2E7D32;
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23388e3c' fill-opacity='0.4'%3E%3Cpath d='M11 0l5 20-5-5L6 0zm22 0l5 20-5-5L28 0zm22 0l5 20-5-5L50 0zm22 0l5 20-5-5L72 0z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Khối trái và phải chiếm không gian bằng nhau để khối giữa được căn chuẩn */
+.header-left, .header-right {
+    flex: 1;
+}
+
+/* Căn chỉnh nội dung khối phải về phía cuối (bên phải) */
+.header-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px; /* Khoảng cách giữa ô tìm kiếm và icon đăng nhập */
+}
+
+/* Khối trung tâm (logo + text) */
+.header-center-block {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+.header-logo {
+    width: 120px !important; /* Tăng kích thước chiều rộng của logo */
+    height: auto;          /* Chiều cao sẽ tự động điều chỉnh để không bị méo hình */
+}
+
+/* --- Bắt đầu code chỉnh sửa khối tiêu đề --- */
+
+
+       
+
+.header-text {
+    color: #FFD700; /* Đặt MÀU VÀNG cho cả 2 dòng chữ */
+}
+
+
+.header-title-vi {
+    font-size: 1.6rem;        
+    font-weight: bold;         
+    text-transform: uppercase; 
+    letter-spacing: 1px;       
+}
+
+
+.header-title-en {
+    font-size: 0.85rem;        
+    opacity: 0.9; 
+    text-align: center;             
+}
+
+
+/* Thanh điều hướng dưới */
+.header-bottom-nav {
+    background-color: #F1F8E9;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.header-bottom-nav .nav-link {
+    color: #1B5E20;
+    font-weight: 600;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.header-bottom-nav .nav-link:hover {
+    color: #D32F2F;
+}
+
+.header-background-pattern {
+    /* Màu nền xanh lá đậm */
+    background-color: #0f3d25;
+
+    /* Vẽ các đường cong dạng SVG giống hình bạn gửi */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='400'%3E%3Cpath d='M0 200 Q300 100 600 200 T1200 200' fill='none' stroke='%2300b050' stroke-width='0.5'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+
+    .section-title{position:relative;font-weight:800;text-transform:uppercase;letter-spacing:.5px}
+    .section-title:after{content:"";display:block;width:80px;height:4px;margin:.5rem 0 1.25rem;background:linear-gradient(90deg,#ffc107,#ffb300)}
+    .card.hero{border:0;border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.12);transition:.25s}
+    .card.hero:hover{transform:translateY(-2px);box-shadow:0 12px 38px rgba(0,0,0,.16)}
+    .card.hero .ratio>img{object-fit:cover}
+    .btn-military{background:linear-gradient(135deg,#ffca28,#ffc107);color:#1b1b1b;border:0;border-radius:10px;padding:.6rem 1rem;font-weight:700}
+    .btn-military:hover{background:linear-gradient(135deg,#ffb300,#ffa000);color:#111}
+    /* balance & centering */
+    .section-title{text-align:left}
+    .feature-card .card-body{display:flex;flex-direction:column;align-items:center;justify-content:space-between}
+    .feature-card .icon{width:84px;height:84px;border-radius:50%;display:grid;place-items:center;margin:0 auto 12px;background:rgba(255,193,7,.15)}
+    .feature-card .icon i{font-size:2.2rem}
+    .training-card .card-body{display:flex;flex-direction:column;justify-content:space-between}

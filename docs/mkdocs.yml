@@ -1,0 +1,13 @@
+site_name: Project Documentation
+theme:
+  name: material
+
+nav:
+  - Trang chủ: index.md
+  - User Manual: user_manual.md
+  - API Endpoints: api_endpoints.md
+  - Database Schema: database_schema.md
+  - Developer Guide: developer_guide.md
+  - Permission System: permission_system.md
+  - Troubleshooting: troubleshooting.md
+  - Changelog: changelog.md

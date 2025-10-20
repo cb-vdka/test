@@ -1,0 +1,174 @@
+/* CSS cập nhật */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(8, 16, 40);
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+}
+
+.login-container {
+    background-color: #0b1739;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 320px;
+}
+
+h2 {
+    margin-bottom: 1.5em;
+    font-size: 1.5em;
+}
+
+.social-login {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+button {
+    padding: 0.75em;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+    width: 100%;
+    /* Chỉnh sửa để các nút có chiều rộng 100% */
+}
+
+.google-button {
+    display: inline-block;
+    background: linear-gradient(286deg, rgb(76, 160, 252) 23%, rgb(224, 47, 238) 76%);
+    color: white;
+    padding: 0.75em;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+    text-decoration: none;
+    width: 298px;
+    /* Chỉnh sửa để các nút có chiều rộng 100% */
+}
+
+.apple-login {
+    background-color: #000000;
+    color: white;
+}
+
+.divider {
+    margin: 1em 0;
+    position: relative;
+    font-size: 0.9em;
+    color: #bbbbbb;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 28%;
+    height: 1px;
+    background-color: #bbbbbb;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="email"],
+.branch {
+    padding: 0.75em;
+    margin-bottom: 1em;
+    border: 1px solid #444444;
+    border-radius: 5px;
+    background-color: #ffff;
+    color: #000000;
+    font-size: 0.9em;
+}
+
+
+input::placeholder {
+    color: #bbbbbb;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.options label {
+    font-size: 0.85em;
+}
+
+.options a {
+    color: #bb66cc;
+    text-decoration: none;
+    font-size: 0.85em;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+.submit-btn {
+    background: linear-gradient(286deg, rgb(76, 160, 252) 23%, rgb(224, 47, 238) 76%);
+    color: white;
+    font-size: 0.9rem;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+p {
+    margin-top: 1em;
+    font-size: 0.85em;
+}
+
+p a {
+    color: #bb66cc;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+.form {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.dividerotp {
+    margin: 2em 0;
+    position: relative;
+    font-size: 0.9em;
+    color: #bbbbbb;
+}
+
+.message_error {
+    color: #ff0000;
+    font-size: 14px;
+    text-align: start;
+    padding-bottom: 12px;
+    margin-top: 5px;
+}

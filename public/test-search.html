@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Search Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/pagination.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Demo Search Form</h2>
+        
+        <!-- Search Form Demo -->
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <form method="GET" action="#" class="search-form">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="search">Tìm kiếm:</label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="search" 
+                                       name="search" 
+                                       value="admin" 
+                                       placeholder="Nhập tên quyền, tên hiển thị hoặc mô tả...">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="status">Trạng thái:</label>
+                                <select class="form-control" id="status" name="status">
+                                    <option value="">Tất cả</option>
+                                    <option value="active" selected>Đang hoạt động</option>
+                                    <option value="deleted">Đã xóa</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="sort_by">Sắp xếp theo:</label>
+                                <select class="form-control" id="sort_by" name="sort_by">
+                                    <option value="created_at">Ngày tạo</option>
+                                    <option value="name" selected>Tên quyền</option>
+                                    <option value="display_name">Tên hiển thị</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label for="sort_order">Thứ tự:</label>
+                                <select class="form-control" id="sort_order" name="sort_order">
+                                    <option value="desc">Giảm dần</option>
+                                    <option value="asc" selected>Tăng dần</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fa fa-search"></i> Tìm kiếm
+                            </button>
+                            <a href="#" class="btn btn-secondary">
+                                <i class="fa fa-refresh"></i> Làm mới
+                            </a>
+                            <span class="badge badge-info ml-2">
+                                <i class="fa fa-filter"></i> Đang lọc
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Search Results Info Demo -->
+        <div class="search-results-info">
+            <div class="d-flex align-items-center">
+                <i class="fa fa-info-circle mr-2"></i>
+                <span>
+                    Tìm kiếm: "<strong>admin</strong>"
+                    | Trạng thái: <strong>Đang hoạt động</strong>
+                    | Sắp xếp: <strong>Tên quyền</strong> <strong>↑</strong>
+                </span>
+            </div>
+        </div>
+
+        <!-- No Results Demo -->
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="no-results">
+                            <i class="fa fa-search"></i>
+                            <h5>Không tìm thấy kết quả</h5>
+                            <p>Không có quyền hạn nào phù hợp với tiêu chí tìm kiếm của bạn.</p>
+                            <a href="#" class="btn btn-primary">
+                                <i class="fa fa-refresh"></i> Xem tất cả
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

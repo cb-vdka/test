@@ -1,0 +1,7 @@
+.button-fix{
+    position: fixed;
+    bottom:30px;
+    right:30px;
+    width: 68px;
+    z-index: 1;
+}

@@ -1,0 +1,63 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies (will be installed in container)
+node_modules
+vendor
+
+# Environment files
+.env
+.env.backup
+.env.production
+
+# Build artifacts
+/public/hot
+/public/storage
+
+# Storage
+/storage/*.key
+/storage/logs
+
+# Cache
+/bootstrap/cache/*.php
+/storage/framework/cache
+/storage/framework/sessions
+/storage/framework/testing
+/storage/framework/views
+
+# Testing
+.phpunit.result.cache
+/coverage
+/tests
+phpunit.xml
+
+# Documentation
+README.md
+*.md
+docs/
+
+# Docker files
+docker-compose*.yml
+Dockerfile*
+
+# CI/CD
+.github
+.gitlab-ci.yml
+
+# Backup files
+*.bak
+*.backup
+*.tmp
+*.temp
