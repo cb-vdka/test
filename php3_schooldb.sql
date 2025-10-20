@@ -198,7 +198,7 @@ INSERT INTO `classrooms` (`id`, `name`, `description`, `status`, `created_by`, `
 (12, '302', 'Phòng học 302', 1, NULL, NULL, NULL, NULL, NULL, NULL),
 (13, '303', 'Phòng học 303', 1, NULL, NULL, NULL, NULL, NULL, NULL),
 (14, '304', 'Phòng học 304', 1, NULL, NULL, NULL, NULL, NULL, NULL),
-(15, '305', 'Phòng học 305', 1, NULL, NULL, NULL, NULL, NULL, NULL);
+(15, '305', 'Phòng học 305', 1, NULL, NULL, NULL, NULL, NULL, NULL),
 (16, '60.6', 'Thao trường 60.6', 1, NULL, NULL, NULL, NULL, NULL, NULL);
 
 
@@ -263,11 +263,11 @@ CREATE TABLE `courses` (
 
 INSERT INTO `courses` (`id`, `name`, `training_level`, `major_name`, `major_code`, `description`, `created_by`, `created_at`, `updated_by`, `updated_at`, `deleted_by`, `deleted_at`) VALUES
 -- Day là huong doi tuong dao tao
-('HSQCH và NVCM-KT', 'Đại học', NULL, 'HSQCH-NVCM-KT', 'Mô tả đối tượng đào tạo HSQCH và NVCM-KT', 1, NOW(), NULL, NULL, NULL, NULL),
-('SQDB', 'Đại học', NULL, 'SQDB', 'Mô tả đối tượng đào tạo SQDB', 1, NOW(), NULL, NULL, NULL, NULL),
-('Bồi dưỡng cán bộ', 'Đại học', NULL, 'BDC', 'Mô tả đối tượng đào tạo Bồi dưỡng cán bộ', 1, NOW(), NULL, NULL, NULL, NULL),
-('Giáo dục QP&AN', 'Đại học', NULL, 'GDQPAN', 'Mô tả đối tượng đào tạo Giáo dục QP&AN', 1, NOW(), NULL, NULL, NULL, NULL),
-('Đào tạo ngành QSCS', 'Đại học', NULL, 'QSCS', 'Mô tả đối tượng đào tạo Đào tạo ngành QSCS', 1, NOW(), NULL, NULL, NULL, NULL);
+(1, 'HSQCH và NVCM-KT', 'Đại học', NULL, 'HSQCH-NVCM-KT', 'Mô tả đối tượng đào tạo HSQCH và NVCM-KT', 1, NOW(), NULL, NULL, NULL, NULL),
+(2, 'SQDB', 'Đại học', NULL, 'SQDB', 'Mô tả đối tượng đào tạo SQDB', 1, NOW(), NULL, NULL, NULL, NULL),
+(3, 'Bồi dưỡng cán bộ', 'Đại học', NULL, 'BDC', 'Mô tả đối tượng đào tạo Bồi dưỡng cán bộ', 1, NOW(), NULL, NULL, NULL, NULL),
+(4, 'Giáo dục QP&AN', 'Đại học', NULL, 'GDQPAN', 'Mô tả đối tượng đào tạo Giáo dục QP&AN', 1, NOW(), NULL, NULL, NULL, NULL),
+(5, 'Đào tạo ngành QSCS', 'Đại học', NULL, 'QSCS', 'Mô tả đối tượng đào tạo Đào tạo ngành QSCS', 1, NOW(), NULL, NULL, NULL, NULL);
 -- --------------------------------------------------------
 
 --
@@ -622,7 +622,7 @@ INSERT INTO `offices` (`id`, `code`, `name`, `description`, `status`, `created_a
 (1, 'TM-HC', 'Phòng Tham mưu – Hành chính', 'Phòng tham mưu và hành chính', 1, NULL, NULL),
 (2, 'ĐT', 'Phòng Đào Tạo', 'Phòng quản lý đào tạo', 1, NULL, NULL),
 (3, 'CT', 'Phòng Chính Trị', 'Phòng quản lý công tác chính trị', 1, NULL, NULL),
-(4, 'HC-KT', 'Phòng Hậu Cần - Kỹ Thuật', 'Phòng quản lý hậu cần và kỹ thuật', 1, NULL, NULL),
+(4, 'HC-KT', 'Phòng Hậu Cần - Kỹ Thuật', 'Phòng quản lý hậu cần và kỹ thuật', 1, NULL, NULL);
 
 
 -- --------------------------------------------------------
@@ -995,30 +995,28 @@ INSERT INTO `school_shifts` (`id`, `code`, `name`, `description`, `start_time`, 
 -- =======================
 -- Mùa Nóng
 -- =======================
-INSERT INTO `shifts` (`code`, `name`, `description`, `start_time`, `end_time`, `shift_date`, `status`) VALUES
-('TIET1-NONG', 'Tiết 1', 'Tiết 1 mùa nóng', '06:30:00', '07:15:00', NULL, 1),
-('TIET2-NONG', 'Tiết 2', 'Tiết 2 mùa nóng', '07:20:00', '08:05:00', NULL, 1),
-('TIET3-NONG', 'Tiết 3', 'Tiết 3 mùa nóng', '08:15:00', '09:00:00', NULL, 1),
-('TIET4-NONG', 'Tiết 4', 'Tiết 4 mùa nóng', '09:05:00', '09:50:00', NULL, 1),
-('TIET5-NONG', 'Tiết 5', 'Tiết 5 mùa nóng', '10:00:00', '10:45:00', NULL, 1),
-('TIET6-NONG', 'Tiết 6', 'Tiết 6 mùa nóng', '10:50:00', '11:35:00', NULL, 1),
-('TIET7-NONG', 'Tiết 7', 'Tiết 7 mùa nóng', '14:00:00', '14:45:00', NULL, 1),
-('TIET8-NONG', 'Tiết 8', 'Tiết 8 mùa nóng', '14:50:00', '15:35:00', NULL, 1),
-('TIET9-NONG', 'Tiết 9', 'Tiết 9 mùa nóng', '15:45:00', '16:30:00', NULL, 1);
+(1, 'TIET1-NONG', 'Tiết 1', 'Tiết 1 mùa nóng', '06:30:00', '07:15:00', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL),
+(2, 'TIET2-NONG', 'Tiết 2', 'Tiết 2 mùa nóng', '07:20:00', '08:05:00', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL),
+(3, 'TIET3-NONG', 'Tiết 3', 'Tiết 3 mùa nóng', '08:15:00', '09:00:00', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL),
+(4, 'TIET4-NONG', 'Tiết 4', 'Tiết 4 mùa nóng', '09:05:00', '09:50:00', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL),
+(5, 'TIET5-NONG', 'Tiết 5', 'Tiết 5 mùa nóng', '10:00:00', '10:45:00', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL),
+(6, 'TIET6-NONG', 'Tiết 6', 'Tiết 6 mùa nóng', '10:50:00', '11:35:00', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL),
+(7, 'TIET7-NONG', 'Tiết 7', 'Tiết 7 mùa nóng', '14:00:00', '14:45:00', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL),
+(8, 'TIET8-NONG', 'Tiết 8', 'Tiết 8 mùa nóng', '14:50:00', '15:35:00', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL),
+(9, 'TIET9-NONG', 'Tiết 9', 'Tiết 9 mùa nóng', '15:45:00', '16:30:00', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL),
 
 -- =======================
 -- Mùa Lạnh
 -- =======================
-INSERT INTO `shifts` (`code`, `name`, `description`, `start_time`, `end_time`, `shift_date`, `status`) VALUES
-('TIET1-LANH', 'Tiết 1', 'Tiết 1 mùa lạnh', '06:45:00', '07:30:00', NULL, 1),
-('TIET2-LANH', 'Tiết 2', 'Tiết 2 mùa lạnh', '07:35:00', '08:20:00', NULL, 1),
-('TIET3-LANH', 'Tiết 3', 'Tiết 3 mùa lạnh', '08:30:00', '09:15:00', NULL, 1),
-('TIET4-LANH', 'Tiết 4', 'Tiết 4 mùa lạnh', '09:20:00', '10:05:00', NULL, 1),
-('TIET5-LANH', 'Tiết 5', 'Tiết 5 mùa lạnh', '10:15:00', '11:00:00', NULL, 1),
-('TIET6-LANH', 'Tiết 6', 'Tiết 6 mùa lạnh', '11:05:00', '11:45:00', NULL, 1),
-('TIET7-LANH', 'Tiết 7', 'Tiết 7 mùa lạnh', '13:45:00', '14:30:00', NULL, 1),
-('TIET8-LANH', 'Tiết 8', 'Tiết 8 mùa lạnh', '14:35:00', '15:20:00', NULL, 1),
-('TIET9-LANH', 'Tiết 9', 'Tiết 9 mùa lạnh', '15:30:00', '16:15:00', NULL, 1);
+(10, 'TIET1-LANH', 'Tiết 1', 'Tiết 1 mùa lạnh', '06:45:00', '07:30:00', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL),
+(11, 'TIET2-LANH', 'Tiết 2', 'Tiết 2 mùa lạnh', '07:35:00', '08:20:00', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL),
+(12, 'TIET3-LANH', 'Tiết 3', 'Tiết 3 mùa lạnh', '08:30:00', '09:15:00', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL),
+(13, 'TIET4-LANH', 'Tiết 4', 'Tiết 4 mùa lạnh', '09:20:00', '10:05:00', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL),
+(14, 'TIET5-LANH', 'Tiết 5', 'Tiết 5 mùa lạnh', '10:15:00', '11:00:00', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL),
+(15, 'TIET6-LANH', 'Tiết 6', 'Tiết 6 mùa lạnh', '11:05:00', '11:45:00', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL),
+(16, 'TIET7-LANH', 'Tiết 7', 'Tiết 7 mùa lạnh', '13:45:00', '14:30:00', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL),
+(17, 'TIET8-LANH', 'Tiết 8', 'Tiết 8 mùa lạnh', '14:35:00', '15:20:00', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL),
+(18, 'TIET9-LANH', 'Tiết 9', 'Tiết 9 mùa lạnh', '15:30:00', '16:15:00', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1128,7 +1126,11 @@ CREATE TABLE `students` (
 --
 
 INSERT INTO `students` (`id`, `name`, `student_code`, `gender`, `date_of_birth`, `email`, `password`, `address`, `course_id`, `major_id`, `cccd_number`, `cccd_issue_date`, `cccd_place`, `year_of_enrollment`, `study_status_id`, `semesters`, `phone`, `role_id`, `OTP`, `created_by`, `created_at`, `updated_by`, `updated_at`, `deleted_by`, `deleted_at`) VALUES
-(1, 'Nguyễn Đức Hùng', '000002', 0, '2004-09-25 17:00:00', 'sinhvien@gmail.com', '$2y$10$gNqpUK/kVtPA6hw9j/k.X.ssG0/fgc0xZUM5f4cQF6x3Qe6T.dQfy', 'Cần Thơ', 1, 3, '388240681537', '2024-09-25 17:00:00', 'Kiên Giang', '2025-03-25 17:00:00', 1, '6', '0945567048', 2, '463941', 1, , NULL, NULL, NULL, NULL, NULL),
+(1, 'Nguyễn Đức Hùng', '000001', 0, '2004-09-25 17:00:00', 'sinhvien@gmail.com', '$2y$10$gNqpUK/kVtPA6hw9j/k.X.ssG0/fgc0xZUM5f4cQF6x3Qe6T.dQfy', 'Cần Thơ', 1, 3, '388240681537', '2024-09-25 17:00:00', 'Kiên Giang', '2025-03-25 17:00:00', 1, '6', '0945567048', 2, '463941', 1,  NULL, NULL, NULL, NULL, NULL),
+(2, 'Đoàn Quang Phúc', '000002', 0, '2004-09-25 17:00:00', 'sinhvien1@gmail.com', '$2y$10$gNqpUK/kVtPA6hw9j/k.X.ssG0/fgc0xZUM5f4cQF6x3Qe6T.dQfy', 'Ninh Bình', 1, 3, '388240681537', '2024-09-25 17:00:00', 'Ninh Bình', '2025-03-25 17:00:00', 1, '6', '0945567048', 2, '463941', 1,  NULL, NULL, NULL, NULL, NULL),
+(3, 'Nguyễn Xuân Toàn', '000003', 0, '2004-09-25 17:00:00', 'sinhvien2@gmail.com', '$2y$10$gNqpUK/kVtPA6hw9j/k.X.ssG0/fgc0xZUM5f4cQF6x3Qe6T.dQfy', 'Cà Mau', 1, 3, '388240681537', '2024-09-25 17:00:00', 'Cà Mau', '2025-03-25 17:00:00', 1, '6', '0945567048', 2, '463941', 1,  NULL, NULL, NULL, NULL, NULL),
+(4, 'Đào Văn Biên', '000004', 0, '2004-09-25 17:00:00', 'sinhvien3@gmail.com', '$2y$10$gNqpUK/kVtPA6hw9j/k.X.ssG0/fgc0xZUM5f4cQF6x3Qe6T.dQfy', 'An Giang', 1, 3, '388240681537', '2024-09-25 17:00:00', 'An Giang', '2025-03-25 17:00:00', 1, '6', '0945567048', 2, '463941', 1,  NULL, NULL, NULL, NULL, NULL),
+(5, 'Đàm Quang Anh', '000005', 0, '2004-09-25 17:00:00', 'sinhvien4@gmail.com', '$2y$10$gNqpUK/kVtPA6hw9j/k.X.ssG0/fgc0xZUM5f4cQF6x3Qe6T.dQfy', 'Đồng Nai', 1, 3, '388240681537', '2024-09-25 17:00:00', 'Đồng Nai', '2025-03-25 17:00:00', 1, '6', '0945567048', 2, '463941', 1,  NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1278,11 +1280,11 @@ CREATE TABLE `teachers` (
 --
 
 INSERT INTO `teachers` (`id`, `code`, `name`, `image`, `email`, `password`, `phone`, `address`, `current_address`, `gender`, `date_of_birth`, `qualifications`, `cccd_front`, `cccd_back`, `bio`, `course_id`, `majors_id`, `role_id`, `OTP`, `created_by`, `created_at`, `updated_by`, `updated_at`, `deleted_by`, `deleted_at`) VALUES
--- (1, 'T001', 'Giang vien A', NULL, 'giangvien@gmail.com', '$2y$10$gNqpUK/kVtPA6hw9j/k.X.ssG0/fgc0xZUM5f4cQF6x3Qe6T.dQfy', '0945567048', '123 Main St, Anytown, USA', '123 Current St, Anytown, USA', 'male', '1980-01-01', 'MSc in Education', 'cccd_front_T001.jpg', 'cccd_back_T001.jpg', 'An experienced teacher with over 20 years in the education field.', 1, 1, 3, '332456', NULL, NULL, NULL, '2025-10-16 09:27:17', NULL, NULL),
--- (2, 'T002', 'Nguyễn Xuân Phúc', NULL, 'nguyenphuc@gmail.com', '$2y$10$gNqpUK/kVtPA6hw9j/k.X.ssG0/fgc0xZUM5f4cQF6x3Qe6T.dQfy', '0945567048', '123 Main St, Anytown, USA', '123 Current St, Anytown, USA', 'Male', '1980-01-01', 'MSc in Education', 'cccd_front_T001.jpg', 'cccd_back_T001.jpg', 'An experienced teacher with over 20 years in the education field.', 1, NULL, 3, '655687', NULL, NULL, NULL, NULL, NULL, NULL),
--- (3, 'T003', 'Cao Bá Quát', NULL, 'caobaquat@gmail.com', '$2y$10$gNqpUK/kVtPA6hw9j/k.X.ssG0/fgc0xZUM5f4cQF6x3Qe6T.dQfy', '0945567048', '123 Main St, Anytown, USA', '123 Current St, Anytown, USA', 'Male', '1980-01-01', 'MSc in Education', 'cccd_front_T001.jpg', 'cccd_back_T001.jpg', 'An experienced teacher with over 20 years in the education field.', 1, NULL, 3, '726645', NULL, NULL, NULL, NULL, NULL, NULL),
--- (4, 'T004', 'Tôn Thất Thiếu', NULL, 'Tonthatthieu@gmail.com', '$2y$10$gNqpUK/kVtPA6hw9j/k.X.ssG0/fgc0xZUM5f4cQF6x3Qe6T.dQfy', '0945567048', '123 Main St, Anytown, USA', '123 Current St, Anytown, USA', 'Male', '1980-01-01', 'MSc in Education', 'cccd_front_T001.jpg', 'cccd_back_T001.jpg', 'An experienced teacher with over 20 years in the education field.', 1, NULL, 3, '666505', NULL, NULL, NULL, NULL, NULL, NULL),
--- (5, NULL, 'GV Demo All Classes', NULL, 'teacher.demo@tqsqk2.edu.vn', '$2y$10$gNqpUK/kVtPA6hw9j/k.X.ssG0/fgc0xZUM5f4cQF6x3Qe6T.dQfy', '0000000000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 3, '893174', NULL, '2025-10-16 01:43:44', NULL, '2025-10-16 01:43:44', NULL, NULL);
+(1, '000001', 'Nguyễn Vũ Dương', NULL, 'giangvien@gmail.com', '$2y$10$gNqpUK/kVtPA6hw9j/k.X.ssG0/fgc0xZUM5f4cQF6x3Qe6T.dQfy', '0945567048', '123 Main St, Anytown, USA', '123 Current St, Anytown, USA', 'male', '1980-01-01', 'MSc in Education', 'cccd_front_T001.jpg', 'cccd_back_T001.jpg', 'An experienced teacher with over 20 years in the education field.', 1, 1, 3, '332456', NULL, NULL, NULL, '2025-10-16 09:27:17', NULL, NULL),
+(2, '000002', 'Nguyễn Văn Toàn', NULL, 'nguyenphuc@gmail.com', '$2y$10$gNqpUK/kVtPA6hw9j/k.X.ssG0/fgc0xZUM5f4cQF6x3Qe6T.dQfy', '0945567048', '123 Main St, Anytown, USA', '123 Current St, Anytown, USA', 'Male', '1980-01-01', 'MSc in Education', 'cccd_front_T001.jpg', 'cccd_back_T001.jpg', 'An experienced teacher with over 20 years in the education field.', 1, NULL, 3, '655687', NULL, NULL, NULL, NULL, NULL, NULL),
+(3, '000003', 'Nguyễn Văn A', NULL, 'caobaquat@gmail.com', '$2y$10$gNqpUK/kVtPA6hw9j/k.X.ssG0/fgc0xZUM5f4cQF6x3Qe6T.dQfy', '0945567048', '123 Main St, Anytown, USA', '123 Current St, Anytown, USA', 'Male', '1980-01-01', 'MSc in Education', 'cccd_front_T001.jpg', 'cccd_back_T001.jpg', 'An experienced teacher with over 20 years in the education field.', 1, NULL, 3, '726645', NULL, NULL, NULL, NULL, NULL, NULL),
+(4, '000004', 'Nguyễn Đức Hùng', NULL, 'Tonthatthieu@gmail.com', '$2y$10$gNqpUK/kVtPA6hw9j/k.X.ssG0/fgc0xZUM5f4cQF6x3Qe6T.dQfy', '0945567048', '123 Main St, Anytown, USA', '123 Current St, Anytown, USA', 'Male', '1980-01-01', 'MSc in Education', 'cccd_front_T001.jpg', 'cccd_back_T001.jpg', 'An experienced teacher with over 20 years in the education field.', 1, NULL, 3, '666505', NULL, NULL, NULL, NULL, NULL, NULL),
+(5, '000005', 'Nguyễn Văn B', NULL, 'teacher.demo@tqsqk2.edu.vn', '$2y$10$gNqpUK/kVtPA6hw9j/k.X.ssG0/fgc0xZUM5f4cQF6x3Qe6T.dQfy', '0000000000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 3, '893174', NULL, '2025-10-16 01:43:44', NULL, '2025-10-16 01:43:44', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1390,18 +1392,12 @@ CREATE TABLE `training_officer_accounts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `training_officer_accounts`
---
-
-INSERT INTO `training_officer_accounts` (`id`, `name`, `email`, `password`, `phone`, `address`, `hometown`, `office_id`, `faculty_id`, `division_id`, `role_id`, `OTP`, `created_by`, `created_at`, `updated_by`, `updated_at`, `deleted_by`, `deleted_at`) VALUES
--- (1, 'Tôn Xuân Hiếu', 'daotao@gmail.com', '$2y$10$gNqpUK/kVtPA6hw9j/k.X.ssG0/fgc0xZUM5f4cQF6x3Qe6T.dQfy', '1234567890', '123 Main St, Anytown, USA', 'Hometown, USA', 1, 1, 4, 12, 163555, NULL, NULL, NULL, '2025-10-12 19:38:26', NULL, NULL),
--- (2, 'Huỳnh Hiểu Minh', 'huynhminhhieu@gmail.com', '$2y$10$gNqpUK/kVtPA6hw9j/k.X.ssG0/fgc0xZUM5f4cQF6x3Qe6T.dQfy', '1234567890', '123 Main St, Anytown, USA', 'Hometown, USA', NULL, NULL, NULL, 12, 274117, NULL, NULL, NULL, '2025-10-06 02:29:32', NULL, NULL),
--- (3, 'Trần Xuân Nho', 'tranxuannho@gmail.com', '$2y$10$gNqpUK/kVtPA6hw9j/k.X.ssG0/fgc0xZUM5f4cQF6x3Qe6T.dQfy', '1234567890', '123 Main St, Anytown, USA', 'Hometown, USA', NULL, NULL, NULL, 12, 148080, NULL, NULL, NULL, '2025-10-06 02:29:32', NULL, NULL),
--- (4, 'Phùng Thanh Độ', 'phungthanhdo@gmail.com', '$2y$10$gNqpUK/kVtPA6hw9j/k.X.ssG0/fgc0xZUM5f4cQF6x3Qe6T.dQfy', '1234567890', '123 Main St, Anytown, USA', 'Hometown, USA', NULL, NULL, NULL, 12, 805123, NULL, NULL, NULL, '2025-10-06 02:29:32', NULL, NULL),
--- (5, 'Lâm Đình Khoa', 'lamdinhkhoa@gmail.com', '$2y$10$gNqpUK/kVtPA6hw9j/k.X.ssG0/fgc0xZUM5f4cQF6x3Qe6T.dQfy', '1234567890', '123 Main St, Anytown, USA', 'Hometown, USA', NULL, NULL, NULL, 12, 802683, NULL, NULL, NULL, '2025-10-06 02:29:32', NULL, NULL);
-
 -- --------------------------------------------------------
-
+INSERT INTO `training_officer_accounts` (`id`, `name`, `email`)
+VALUES
+(2, 'Officer 2', 'officer2@gmail.com'),
+(4, 'Officer 4', 'officer4@gmail.com'),
+(5, 'Officer 5', 'officer5@gmail.com');
 --
 -- Table structure for table `users`
 --
