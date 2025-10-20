@@ -13,23 +13,30 @@ class ClassSubjectSeeder extends Seeder
      */
     public function run(): void
     {
-        ClassSubject::insert([
+        ClassSubject::firstOrCreate(
             [
                 'class_id' => 1,
                 'subject_id' => 2,
                 'teacher_id' => 2,
-                'student_count' => 30,
-                'start_date' => '2024-09-01', // Example start date
-                'end_date' => '2024-12-15',   // Example end date
             ],
+            [
+                'student_count' => 30,
+                'start_date' => null,
+                'end_date' => null,
+            ]
+        );
+
+        ClassSubject::firstOrCreate(
             [
                 'class_id' => 2,
                 'subject_id' => 1,
                 'teacher_id' => 2,
-                'student_count' => 30,
-                'start_date' => '2024-09-01', // Example start date
-                'end_date' => '2024-12-15',   // Example end date
             ],
-        ]);
+            [
+                'student_count' => 30,
+                'start_date' => null,
+                'end_date' => null,
+            ]
+        );
     }
 }

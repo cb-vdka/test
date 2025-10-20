@@ -7,7 +7,7 @@
                 <table id="basic-datatables" class="display table table-striped table-hover table-sm dataTable" role="grid" aria-describedby="basic-datatables_info">
                     <thead>
                     <tr role="row">
-                        <th style="width: 100px;">MMH</th>
+                        <th style="width: 100px;">Mã môn học</th>
                         <th style="width: 190px;">Tên ngành</th>
                         <th style="width: 200px;">Chuyên ngành</th>
                         <th style="width: 250px;">Môn học</th>

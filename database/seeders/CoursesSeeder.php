@@ -13,7 +13,6 @@ class CoursesSeeder extends Seeder
      */
     public function run(): void
     {
-        // Chỉ chạy ở môi trường local hoặc testing
         if (!app()->environment(['local', 'testing'])) {
             return;
         }
